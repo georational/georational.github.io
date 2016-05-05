@@ -10,7 +10,7 @@
   <body>
 
 <script>
-AFRAME.registerShader('shader', { schema: {
+AFRAME.registerShader('SkyShader.js', { schema: {
 
 		
 		luminance:	 { type: 'number', default: '1.166', is: 'uniform'  },
@@ -264,7 +264,7 @@ THREE.Sky = function () {
 		<a-mixin id="ambient" sound="src: https://ucarecdn.com/0722dff3-d5ce-4680-b769-c674fc5d5236/250036__hintringer__mysticwindhowling_copy.mp3; autoplay: true; loop: true;volume: 0.333"></a-mixin>
 	</a-assets>
 
-<a-sky shader="shader"></a-sky>
+<a-sky shader="SkyShader.js"></a-sky>
 <a-plane color="black" width="10000" height="10000" rotation="-90 0 0"></a-plane>
 <a-sphere position="0 0 0" radius="4000" src="#starmap" side="back" opacity=".2" rotation="0 0 -23.5">
 	<a-animation attribute="rotation" repeat="indefinite" dur="100000" easing="linear" to="-360 0 0"></a-animation>

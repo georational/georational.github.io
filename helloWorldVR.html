@@ -261,7 +261,7 @@ THREE.Sky = function () {
 	<a-assets>
 		<img id="starmap" src="http://ucarecdn.com/99e9dc0a-735e-419f-972a-bf89255968a2/-/resize/x2048/TychoSkymapIIt5_08192x04096_copy_flopped.jpg" crossorigin="anonymous">
 		<a-asset-item id="obj" src="http://ucarecdn.com/51ae27ff-4ad7-416b-8026-fcd936c0031d/Stonehenge3.obj"></a-asset-item>>
-		<a-mixin id="ambient" sound="src: https://ucarecdn.com/0722dff3-d5ce-4680-b769-c674fc5d5236/250036__hintringer__mysticwindhowling_copy.mp3; autoplay: true; loop: true;volume: 0.333"></a-mixin>
+		<a-mixin id="ambient" sound="src: https://ucarecdn.com/0722dff3-d5ce-4680-b769-c674fc5d5236/250036__hintringer__mysticwindhowling_copy.mp3; autoplay: true; loop: true;volume: 0.4"></a-mixin>
 	</a-assets>
 
 <a-sky shader="SkyShader.js"></a-sky>
@@ -269,7 +269,7 @@ THREE.Sky = function () {
 <a-sphere position="0 0 0" radius="4000" src="#starmap" side="back" opacity=".2" rotation="0 0 -23.5">
 	<a-animation attribute="rotation" repeat="indefinite" dur="100000" easing="linear" to="-360 0 0"></a-animation>
 </a-sphere>
-<a-obj-model src="#obj" position="0 -1 -40" color="black" side="double"></a-obj-model>
+<a-obj-model src="#obj" position="0 -1 -30" color="black" side="double"></a-obj-model>
 
 <a-box position="0 0 0" scale="10 10 10" color="black" side="double">
 		<a-animation attribute="opacity" begin="2400" dur="2400" from="1" to="0" easing="ease-out"></a-animation>

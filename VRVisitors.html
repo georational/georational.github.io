@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>My A-Frame Scene</title>
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/ngokevin/aframe-firebase-component/master/dist/aframe-firebase-component.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-firebase-component/master/dist/aframe-firebase-component.min.js"></script>
   </head>
 
 <body>
@@ -17,6 +17,7 @@
       <a-mixin id="avatar-head"
               geometry="primitive: box; depth: 0.3; height: 0.3; width: 0.3"
               material="color: #222"></a-mixin>
+      <a-asset-item id="01" src="https://ucarecdn.com/63810443-5fc3-48cc-9d2e-e85e949723ed/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
     </a-assets>
 
     <a-entity id="avatar" mixin="avatar-head"

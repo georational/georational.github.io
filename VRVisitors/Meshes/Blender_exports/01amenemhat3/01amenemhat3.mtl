@@ -9,7 +9,7 @@ Ks 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd https://ucarecdn.com/61f78b75-7c50-41b0-9963-8add5e40e834/01amenemhat3_0.jpg
+map_Kd 01amenemhat3_0.jpg
 
 newmtl Texture_1
 Ns 0.000000
@@ -19,4 +19,4 @@ Ks 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd https://ucarecdn.com/c3d4c190-acb0-422a-a12f-2730b4f4d748/01amenemhat3_1.jpg
+map_Kd 01amenemhat3_1.jpg

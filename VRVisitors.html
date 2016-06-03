@@ -10,7 +10,7 @@
   </head>
 
 <body>
-  <a-scene firebase="apiKey: AIzaSyAGFBL9jkhsqIHe0xwB-JEb4V4FHcozDmk;
+  <a-scene physics firebase="apiKey: AIzaSyAGFBL9jkhsqIHe0xwB-JEb4V4FHcozDmk;
                      authDomain: vrvisitors.firebaseapp.com;
                      databaseURL: https://vrvisitors.firebaseio.com;
                      storageBucket: vrvisitors.appspot.com">
@@ -31,7 +31,7 @@
     <a-entity static-body="shape: box" obj-model="obj: #obj02; mtl: #mtl02" scale="0.3 0.3 0.3" rotation="90 30 0" position="3 5.1 0.2"></a-entity>
     <a-entity static-body="shape: box" obj-model="obj: #obj03; mtl: #mtl03" scale="0.07 0.07 0.07" rotation="0 180 0" position="6 1 0"></a-entity>
 
-    <a-grid static-body></a-grid>
+    <a-plane static-body color="black" width="1000" height="1000" rotation="-90 0 0"></a-plane>
 
     <a-entity id="avatar" mixin="avatar-head"
               camera universal-controls kinematic-body="shape: box; enableSlopes: false"

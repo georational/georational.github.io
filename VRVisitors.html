@@ -34,7 +34,7 @@
     <a-grid static-body></a-grid>
 
     <a-entity id="avatar" mixin="avatar-head"
-              camera universal-controls kinematic-body="shape: box"
+              camera universal-controls kinematic-body="shape: box; enableSlopes: false"
               firebase-broadcast="components: mixin, position, rotation"
               position="0 1.8 5">
     </a-entity>

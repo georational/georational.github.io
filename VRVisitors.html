@@ -19,17 +19,17 @@
       <a-mixin id="avatar-head"
               geometry="primitive: box; depth: 0.3; height: 0.3; width: 0.3"
               material="color: #222"></a-mixin>
-      <a-asset-item id="obj01" scale="0.067 0.067 0.067" rotation="270 100 0" position="0.26 -0.59 0.3" src="https://ucarecdn.com/63810443-5fc3-48cc-9d2e-e85e949723ed/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
+      <a-asset-item id="obj01" src="https://ucarecdn.com/63810443-5fc3-48cc-9d2e-e85e949723ed/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
       <a-asset-item id="mtl01" src="./VRVisitors/assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item>
-      <a-asset-item id="obj02" scale="0.3 0.3 0.3" rotation="90 30 0" position="3 5.1 0.2" src="https://ucarecdn.com/5211c158-d0d0-4324-8e1d-697ed34b8bbb/02hoahakananaia.obj" crossorigin="anonymous"></a-asset-item>
+      <a-asset-item id="obj02" src="https://ucarecdn.com/5211c158-d0d0-4324-8e1d-697ed34b8bbb/02hoahakananaia.obj" crossorigin="anonymous"></a-asset-item>
       <a-asset-item id="mtl02" src="./VRVisitors/assets/obj/02hoahakananaia/02hoahakananaia.mtl" crossorigin="anonymous"></a-asset-item>
-      <a-asset-item id="obj03" scale="0.07 0.07 0.07" rotation="0 180 0" position="6 0 0" src="https://ucarecdn.com/9bd2a492-872b-4945-97a9-598c3e56b48c/03levantstatue.obj" crossorigin="anonymous"></a-asset-item>
+      <a-asset-item id="obj03" src="https://ucarecdn.com/9bd2a492-872b-4945-97a9-598c3e56b48c/03levantstatue.obj" crossorigin="anonymous"></a-asset-item>
       <a-asset-item id="mtl03" src="./VRVisitors/assets/obj/03levantstatue/03levantstatue.mtl" crossorigin="anonymous"></a-asset-item>
     </a-assets>
 
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" ></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj02; mtl: #mtl02" ></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj03; mtl: #mtl03" ></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" scale="0.067 0.067 0.067" rotation="270 100 0" position="0.26 -0.59 0.3"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj02; mtl: #mtl02" scale="0.3 0.3 0.3" rotation="90 30 0" position="3 5.1 0.2"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj03; mtl: #mtl03" scale="0.07 0.07 0.07" rotation="0 180 0" position="6 0 0"></a-entity>
 
     <a-grid static-body></a-grid>
 

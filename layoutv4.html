@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My A-Frame Scene</title>
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-layout-component/master/dist/aframe-layout-component.min.js"></script>
+    <script src="https://sandbox.donmccurdy.com/vr/aframe-extras.js"></script>
+</head>
+  </head>
+
+  <body>
+
+  <a-scene physics fog="type: linear; color: white; far: 7; near: 1" >
+    <a-assets>
+      <img id="main" src="assets/noisy-texture-256x256-o15-d48-c-ffffff-t0.png">
+      <a-mixin id="pedestal" static-body geometry="primitive: box; width: .5; height: 1.2; depth: .5" material="src: #main; roughness: 1; metalness: 0;"></a-mixin>
+      <a-mixin id="lights" light="type: point; intensity: .25; decay: 2; distance: 12"></a-mixin>
+      <a-entity id="centre" position="0 0 0"></a-entity>
+
+      <a-asset-item id="obj01" src="https://ucarecdn.com/63810443-5fc3-48cc-9d2e-e85e949723ed/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
+      <a-asset-item id="mtl01" src="./VRVisitors/assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item>
+      <a-asset-item id="obj02" src="https://ucarecdn.com/5211c158-d0d0-4324-8e1d-697ed34b8bbb/02hoahakananaia.obj" crossorigin="anonymous"></a-asset-item>
+      <a-asset-item id="mtl02" src="./VRVisitors/assets/obj/02hoahakananaia/02hoahakananaia.mtl" crossorigin="anonymous"></a-asset-item>
+      <a-asset-item id="obj03" src="https://ucarecdn.com/9bd2a492-872b-4945-97a9-598c3e56b48c/03levantstatue.obj" crossorigin="anonymous"></a-asset-item>
+      <a-asset-item id="mtl03" src="./VRVisitors/assets/obj/03levantstatue/03levantstatue.mtl" crossorigin="anonymous"></a-asset-item>
+
+    </a-assets>
+
+    <a-entity layout="type: circle; radius: 5">
+      <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+      <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+      <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+      <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+      <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+      <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+      <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+      <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+    </a-entity>
+
+    <a-entity layout="type: circle; radius: 6">
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+    </a-entity>
+
+    <a-entity layout="type: circle; radius: 4">
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+      <a-entity mixin="lights" look-at="#centre"></a-entity>
+    </a-entity>
+
+    <a-mixin id="_01" static-body="shape: box"></a-mixin>
+    <a-mixin id="_02" static-body="shape: box"></a-mixin>
+    <a-mixin id="_03" static-body="shape: box"></a-mixin>
+
+<a-entity layout="type: circle; radius: 5">
+    <a-entity obj-model="obj: #obj01; mtl: #mtl01" scale="0.067 0.067 0.067" rotation="270 100 0" position="0.26 -0.59 0.3" mixin="_01" ></a-entity>
+    <a-entity obj-model="obj: #obj02; mtl: #mtl02" scale="0.3 0.3 0.3" rotation="90 30 0" position="3 5.1 0.2" mixin="_02" ></a-entity>
+    <a-entity obj-model="obj: #obj03; mtl: #mtl03" scale="0.07 0.07 0.07" rotation="0 180 0" position="6 1 0" mixin="_03" ></a-entity>
+</a-entity>
+
+    <a-sky color="black"></a-sky>
+    <a-plane static-body width="100" height="100" rotation="-90 0 0" position="0 -.5 0" material="src: #main; roughness: .9; metalness: 0; opacity: 1; repeat: 100 100" ></a-plane>
+    <a-light type="hemisphere" color="white" intensity=".67" position="0 3 0" distance="7"></a-light>
+    <a-light type="ambient" color="#222" intensity="0.01" position="0 3 0" distance="7"></a-light>
+
+    <a-entity camera look-controls wasd-controls kinematic-body position="0 1.67 0"></a-entity>
+  </a-scene>
+
+
+  </body>
+</html>

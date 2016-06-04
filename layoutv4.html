@@ -15,7 +15,7 @@
     <a-assets>
       <img id="main" src="assets/noisy-texture-256x256-o15-d48-c-ffffff-t0.png">
       <a-mixin id="pedestal" static-body geometry="primitive: box; width: .5; height: 1.2; depth: .5" material="src: #main; roughness: 1; metalness: 0;"></a-mixin>
-      <a-mixin id="lights" light="type: point; intensity: .25; decay: 2; distance: 12"></a-mixin>
+      <a-mixin id="slights" light="type: point; intensity: .25; decay: 2; distance: 12"></a-mixin>
       <a-entity id="centre" position="0 0 0"></a-entity>
 
       <a-asset-item id="obj01" src="https://ucarecdn.com/63810443-5fc3-48cc-9d2e-e85e949723ed/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
@@ -65,9 +65,9 @@
     <a-mixin id="_03" static-body="shape: box"></a-mixin>
 
 <a-entity layout="type: circle; radius: 5">
-    <a-entity obj-model="obj: #obj01; mtl: #mtl01" scale="0.067 0.067 0.067" rotation="270 100 0" position="0.26 -0.59 0.3" mixin="_01" ></a-entity>
-    <a-entity obj-model="obj: #obj02; mtl: #mtl02" scale="0.3 0.3 0.3" rotation="90 30 0" position="3 5.1 0.2" mixin="_02" ></a-entity>
-    <a-entity obj-model="obj: #obj03; mtl: #mtl03" scale="0.07 0.07 0.07" rotation="0 180 0" position="6 1 0" mixin="_03" ></a-entity>
+    <a-entity obj-model="obj: #obj01; mtl: #mtl01" scale="0.067 0.067 0.067" rotation="270 100 0" position="0.26 -0.59 0.3"</a-entity>
+    <a-entity obj-model="obj: #obj02; mtl: #mtl02" scale="0.3 0.3 0.3" rotation="90 30 0" position="3 5.1 0.2"></a-entity>
+    <a-entity obj-model="obj: #obj03; mtl: #mtl03" scale="0.07 0.07 0.07" rotation="0 180 0" position="6 1 0"></a-entity>
 </a-entity>
 
     <a-sky color="black"></a-sky>

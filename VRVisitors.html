@@ -38,7 +38,7 @@
     <a-plane static-body color="black" width="1000" height="1000" rotation="-90 0 0"></a-plane>
 
     <a-entity id="avatar" mixin="avatar-head"
-              camera universal-controls kinematic-body="shape: box; enableSlopes: false"
+              camera wasd-controls look-controls kinematic-body="shape: box; enableSlopes: false"
               firebase-broadcast="components: mixin, position, rotation"
               position="0 1.8 5">
     </a-entity>

@@ -5,7 +5,7 @@
     <title>My A-Frame Scene</title>
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-layout-component/master/dist/aframe-layout-component.min.js"></script>
-    <script src="https://sandbox.donmccurdy.com/vr/aframe-extras.js"></script>
+    <!--- <script src="https://sandbox.donmccurdy.com/vr/aframe-extras.js"></script> -->
 </head>
   </head>
 
@@ -13,7 +13,7 @@
 
   <a-scene physics fog="type: linear; color: white; far: 7; near: 1" >
     <a-assets>
-      <img id="main" src="assets/noisy-texture-256x256-o15-d48-c-ffffff-t0.png">
+      <img id="main" src="./VRVisitors/assets/noisy-texture-256x256-o15-d48-c-ffffff-t0.png">
       <a-mixin id="pedestal" static-body geometry="primitive: box; width: .5; height: 1.2; depth: .5" material="src: #main; roughness: 1; metalness: 0;"></a-mixin>
       <a-mixin id="slights" light="type: point; intensity: .25; decay: 2; distance: 12"></a-mixin>
       <a-entity id="centre" position="0 0 0"></a-entity>

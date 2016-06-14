@@ -22,7 +22,7 @@
 
       <a-mixin id="avatar-head"
               obj-model="obj: url(./assets/avatar/avatar.obj)"
-              material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2" scale=".5 .5 .5"></a-mixin>
+              material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2" scale=".05 .05 .05"></a-mixin>
 
       <a-cubemap id="env">
                 <img src="./assets/avatar/env/0003.png">
@@ -87,10 +87,10 @@
   <a-light type="ambient" color="#AAA" intensity=".10" position="0 3 0" distance="7"></a-light>
 
 
-    <a-entity id="avatar" mixin="avatar"
+    <a-entity id="avatar" mixin="avatar-head"
               camera universal-controls kinematic-body
               firebase-broadcast="components: mixin, position, rotation"
-              position="0 1.8 5">
+              position="0 1.67 5">
     </a-entity>
 
   </a-scene>

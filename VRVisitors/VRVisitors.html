@@ -21,7 +21,7 @@
   <a-assets>
 
       <a-mixin id="avatar-head"
-              obj-model="obj: url(./assets/avatar/avatar.obj) width: .1; height: .1; depth: .1"
+              obj-model="obj: url(./assets/avatar/avatar.obj)"
               material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2"></a-mixin>
 
       <a-cubemap id="env">
@@ -39,14 +39,13 @@
       <a-entity id="centre" position="0 0 0"></a-entity>
 
       <a-asset-item id="obj01" src="./assets/obj/01amenemhat3/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
-      <a-asset-item id="mtl01" src="./assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item></a-assets>
+      <a-asset-item id="mtl01" src="./assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item>
 
-  <!--<script>
+  <script>
   var scene = document.querySelector('a-scene');
     (function () {
-            var obj = document.createElement('a-entity');
-                          obj.setAttribute('mixin', 'avatar-head');
-            obj.setAttribute('material', {
+            var obj = document.querySelector('#avatar-head');
+              obj.setAttribute('material', {
               color: new THREE.Color(.8, .5, .3).getStyle(),
               envMap: '#env',
               metalness: .2,
@@ -55,7 +54,8 @@
             scene.appendChild(obj);
 
     })();
-  </script>-->
+  </script>
+  </a-assets>
 
   <a-entity layout="type: circle; radius: 8">
     <a-entity mixin="pedestal" look-at="#centre"></a-entity>
@@ -86,8 +86,6 @@
   <a-light type="hemisphere" color="white" groundColor="black" intensity=".5"></a-light>
   <a-light type="ambient" color="#AAA" intensity=".10" position="0 3 0" distance="7"></a-light>
 
-  <a-entity mixin="avatar-head" position="0 2 0"></a-entity>
-  
     <a-entity id="avatar" mixin="avatar-head"
               camera universal-controls kinematic-body 
               firebase-broadcast="components: mixin, position, rotation"

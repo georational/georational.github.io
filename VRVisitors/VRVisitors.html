@@ -11,22 +11,19 @@
 
 <body>
 
-  <a-scene physics
-           fog="type: linear; color: #000; far: 24; near: 6"
-           firebase="apiKey: AIzaSyAGFBL9jkhsqIHe0xwB-JEb4V4FHcozDmk;
+  <a-scene  physics
+            fog="type: linear; color: #000; far: 24; near: 6"
+            firebase="apiKey: AIzaSyAGFBL9jkhsqIHe0xwB-JEb4V4FHcozDmk;
                      authDomain: vrvisitors.firebaseapp.com;
                      databaseURL: https://vrvisitors.firebaseio.com;
                      storageBucket: vrvisitors.appspot.com">
 
   <a-assets>
 
-      <a-mixin id="avatar-head"
-              obj-model="obj: url(./assets/avatar/avatar.obj)"</a-mixin>
-              
-      <a-mixin id="face"
-              obj-model="obj: url(./assets/avatar/avatar.obj)"
-              material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2"></a-mixin>
-              
+      <a-mixin  id="avatar-head"
+                obj-model="obj: url(./assets/avatar/avatar.obj)"
+                material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2"></a-mixin>
+        
       <a-cubemap id="env">
                 <img src="./assets/avatar/env/0003.png">
                 <img src="./assets/avatar/env/0004.png">
@@ -36,18 +33,18 @@
                 <img src="./assets/avatar/env/0002.png"></a-cubemap>
                 
       <script>
-            var scene = document.querySelector('a-scene');
+        var scene = document.querySelector('a-scene');
             (function () {
-              var obj = document.createElement('a-mixin');
-                            obj.setAttribute('id', 'avatar-head');
-                            obj.setAttribute('mixin', 'face');
-              obj.setAttribute('material', {
-                color: new THREE.Color(.8, .5, .3).getStyle(),
-                envMap: '#env',
-                metalness: .2,
-                roughness: 0,
-              });
-              scene.appendChild(obj);})();</script>
+                var obj = document.querySelector('#avatar-head');
+                    obj.setAttribute('material', {
+                    color: new THREE.Color(.66, .52, .23).getStyle(),
+                    envMap: '#env',
+                    metalness: .2,
+                    roughness: 0,
+                    });
+                    scene.appendChild(obj);
+            })();
+      </script>
 
       <img id="main" src="assets/noisy-texture-256x256-o20-d20-c-000000-t0.png">
 

@@ -11,7 +11,7 @@
 
 <body>
 
-  <a-scene 
+  <a-scene physics
            fog="type: linear; color: #000; far: 24; near: 6"
            firebase="apiKey: AIzaSyAGFBL9jkhsqIHe0xwB-JEb4V4FHcozDmk;
                      authDomain: vrvisitors.firebaseapp.com;
@@ -22,7 +22,7 @@
 
       <a-mixin id="avatar-head"
               obj-model="obj: url(./assets/avatar/avatar.obj)"
-              material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2" scale=".1 .1 .1" rotation="0 -90 0" position="0 0 .1"></a-mixin>
+              material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2"></a-mixin>
 
       <a-cubemap id="env">
                 <img src="./assets/avatar/env/0003.png">

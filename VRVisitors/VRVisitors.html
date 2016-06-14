@@ -21,17 +21,21 @@
   <a-assets>
 
       <a-mixin id="avatar-head"
-              obj-model="obj: url(./assets/avatar/avatar.obj)"
+              obj-model="obj: url(./assets/avatar/avatar.obj)"</a-mixin>
+              
+      <a-mixin id="face"
               material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2"></a-mixin>
+              
       <script>
         var scene = document.querySelector('a-scene');
             (function () {
                 var obj = document.querySelector('#avatar-head');
                     obj.setAttribute('material', {
-                    color: new THREE.Color(.66, .57, .23).getStyle(),
+                    color: new THREE.Color(.66, .52, .23).getStyle(),
                     envMap: '#env',
                     metalness: .2,
                     roughness: 0,
+                    obj.setAttribute('mixin', 'face');
             });
             scene.appendChild(obj);
             })();
@@ -84,7 +88,7 @@
   <a-light type="hemisphere" color="white" groundColor="black" intensity=".5"></a-light>
   <a-light type="ambient" color="#AAA" intensity=".10" position="0 3 0" distance="7"></a-light>
 
-    <a-entity id="avatar" mixin="avatar-head" material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2"
+    <a-entity id="avatar" mixin="avatar-head"
               camera universal-controls kinematic-body 
               firebase-broadcast="components: mixin, position, rotation"
               position="0 1.67 5">

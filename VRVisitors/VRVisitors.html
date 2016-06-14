@@ -20,7 +20,7 @@
 
   <a-assets>
 
-      <a-mixin id="face"
+      <a-mixin id="avatar-head"
               obj-model="obj: url(./assets/avatar/avatar.obj)"
               material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2" scale=".05 .05 .05" rotation="0 90 0"></a-mixin>
 
@@ -41,7 +41,7 @@
       <a-asset-item id="obj01" src="./assets/obj/01amenemhat3/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
       <a-asset-item id="mtl01" src="./assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item></a-assets>
 
-<!--<script>
+<script>
   var scene = document.querySelector('a-scene');
     (function () {
             var obj = document.createElement('a-entity');
@@ -55,7 +55,7 @@
             scene.appendChild(obj);
 
     })();
-  </script>-->
+  </script>
 
   <a-entity layout="type: circle; radius: 8">
     <a-entity mixin="pedestal" look-at="#centre"></a-entity>
@@ -88,7 +88,7 @@
 
   <a-entity mixin="face"></a-entity>
   
-    <a-entity id="avatar" mixin="0face"
+    <a-entity id="avatar"
               camera universal-controls kinematic-body 
               firebase-broadcast="components: mixin, position, rotation"
               position="0 1.67 5">

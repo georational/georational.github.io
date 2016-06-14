@@ -39,20 +39,21 @@
       <a-entity id="centre" position="0 0 0"></a-entity>
 
       <a-asset-item id="obj01" src="./assets/obj/01amenemhat3/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
-      <a-asset-item id="mtl01" src="./assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item>
+      <a-asset-item id="mtl01" src="./assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item></a-assets>
 
-  <script>
-  (function () {
-            var obj = document.querySelector('#face');
-              obj.setAttribute('material', {
+  var scene = document.querySelector('a-scene');
+    (function () {
+            var obj = document.createElement('a-entity');
+                          obj.setAttribute('mixin', 'avatar-head');
+            obj.setAttribute('material', {
               color: new THREE.Color(.8, .5, .3).getStyle(),
               envMap: '#env',
               metalness: .2,
               roughness: 0,
             });
-            });
-  </script>
-  </a-assets>
+            scene.appendChild(obj);
+
+    })();
 
   <a-entity layout="type: circle; radius: 8">
     <a-entity mixin="pedestal" look-at="#centre"></a-entity>

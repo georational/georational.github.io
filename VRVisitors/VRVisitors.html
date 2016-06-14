@@ -20,9 +20,9 @@
 
   <a-assets>
 
-      <a-mixin id="face"
+      <a-mixin id="avatar-head"
               obj-model="obj: url(./assets/avatar/avatar.obj)"
-              material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2" scale=".05 .05 .05" rotation="0 -90 0" position="0 0 .1"></a-mixin>
+              material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2" scale=".1 .1 .1" rotation="0 -90 0" position="0 0 .1"></a-mixin>
 
       <a-cubemap id="env">
                 <img src="./assets/avatar/env/0003.png">
@@ -39,14 +39,13 @@
       <a-entity id="centre" position="0 0 0"></a-entity>
 
       <a-asset-item id="obj01" src="./assets/obj/01amenemhat3/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
-      <a-asset-item id="mtl01" src="./assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item>
+      <a-asset-item id="mtl01" src="./assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item></a-assets>
 
-<script>
+  <!--<script>
   var scene = document.querySelector('a-scene');
     (function () {
-            var obj = document.createElement('a-mixin');
-                          obj.setAttribute('id', 'avatar-head');
-                          obj.setAttribute('mixin', 'face');
+            var obj = document.createElement('a-entity');
+                          obj.setAttribute('mixin', 'avatar-head');
             obj.setAttribute('material', {
               color: new THREE.Color(.8, .5, .3).getStyle(),
               envMap: '#env',
@@ -56,7 +55,7 @@
             scene.appendChild(obj);
 
     })();
-  </script></a-assets>
+  </script>-->
 
   <a-entity layout="type: circle; radius: 8">
     <a-entity mixin="pedestal" look-at="#centre"></a-entity>

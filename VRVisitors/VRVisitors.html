@@ -20,7 +20,7 @@
 
   <a-assets>
 
-      <a-mixin id="avatar-head"
+      <a-mixin id="face"
               obj-model="obj: url(./assets/avatar/avatar.obj)"
               material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2" scale=".05 .05 .05" rotation="0 -90 0" position="0 0 .1"></a-mixin>
 
@@ -44,8 +44,9 @@
 <script>
   var scene = document.querySelector('a-scene');
     (function () {
-            var obj = document.querySelector('#avatar-head');
-                          
+            var obj = document.createElement('a-mixin');
+                          obj.setAttribute('id', 'avatar-head');
+                          obj.setAttribute('mixin', 'face');
             obj.setAttribute('material', {
               color: new THREE.Color(.8, .5, .3).getStyle(),
               envMap: '#env',

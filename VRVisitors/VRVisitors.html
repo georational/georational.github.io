@@ -44,9 +44,8 @@
   <script>
   var scene = document.querySelector('a-scene');
     (function () {
-            var obj = document.createElement('a-entity');
-                          obj.setAttribute('mixin', 'face');
-            obj.setAttribute('material', {
+            var obj = document.querySelector('#face');
+              obj.setAttribute('material', {
               color: new THREE.Color(.8, .5, .3).getStyle(),
               envMap: '#env',
               metalness: .2,
@@ -86,9 +85,10 @@
   <a-light type="hemisphere" color="white" groundColor="black" intensity=".5"></a-light>
   <a-light type="ambient" color="#AAA" intensity=".10" position="0 3 0" distance="7"></a-light>
 
-
+  <a-entity mixin="face"></a-entity>
+  
     <a-entity id="avatar" 
-              camera universal-controls kinematic-body mixin="face"
+              camera universal-controls kinematic-body mixin="0face"
               firebase-broadcast="components: mixin, position, rotation"
               position="0 1.67 5">
     </a-entity>

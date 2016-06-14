@@ -20,26 +20,29 @@
 
   <a-assets>
 
-      <a-mixin id="avatar-head"
+      <a-mixin id="0avatar-head"
               obj-model="obj: url(./assets/avatar/avatar.obj)"</a-mixin>
               
       <a-mixin id="face"
+              obj-model="obj: url(./assets/avatar/avatar.obj)"
               material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2"></a-mixin>
               
       <script>
         var scene = document.querySelector('a-scene');
             (function () {
-                var obj = document.querySelector('#avatar-head');
-                    obj.setAttribute('material', {
-                    color: new THREE.Color(.66, .52, .23).getStyle(),
-                    envMap: '#env',
-                    metalness: .2,
-                    roughness: 0,
-                    });
-                    obj.setAttribute('mixin', '#face');
-            scene.appendChild(obj);
-            })();
-      </script>
+              var obj = document.createElement('a-mixin');
+                            obj.setAttribute('id', 'avatar-head');
+                            obj.setAttribute('mixin', 'face');
+              obj.setAttribute('material', {
+                color: new THREE.Color(.8, .5, .3).getStyle(),
+                envMap: '#sky',
+                metalness: .2,
+                roughness: 0,
+              });
+              scene.appendChild(obj);
+
+      })();
+    </script>
 
       <a-cubemap id="env">
                 <img src="./assets/avatar/env/0003.png">

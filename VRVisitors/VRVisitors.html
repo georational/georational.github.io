@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>VRVisitors</title>
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-firebase-component/master/dist/aframe-firebase-component.min.js"></script>
     <script src="./js/aframe-layout-component.min.js"></script>
     <script src="./js/aframe-extras.min.js"></script>
   </head>
@@ -20,7 +21,7 @@
   <a-assets>
 
       <a-mixin id="avatar-head"
-              obj-model="obj: url(avatar_smooth.obj)"
+              obj-model="obj: url(./assets/avatar/avatar.obj)"
               material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2" scale=".5 .5 .5"></a-mixin>
 
       <a-cubemap id="env">
@@ -84,7 +85,7 @@
   <a-light type="spot" color="white" intensity="4" exponent="20" position="0 4 0"></a-light>
   <a-light type="hemisphere" color="white" groundColor="black" intensity=".5"></a-light>
   <a-light type="ambient" color="#AAA" intensity=".10" position="0 3 0" distance="7"></a-light>
-    
+
 
     <a-entity id="avatar" mixin="avatar"
               camera universal-controls kinematic-body

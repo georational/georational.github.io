@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VRVisitors</title>
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="./js/aframe-layout-component.min.js"></script>
+    <script src="./js/aframe-extras.min.js"></script>
+  </head>
+
+<body>
+
+  <a-scene physics
+           fog="type: linear; color: #000; far: 24; near: 6"
+           firebase="apiKey: AIzaSyAGFBL9jkhsqIHe0xwB-JEb4V4FHcozDmk;
+                     authDomain: vrvisitors.firebaseapp.com;
+                     databaseURL: https://vrvisitors.firebaseio.com;
+                     storageBucket: vrvisitors.appspot.com">
+
+  <a-assets>
+
+      <a-mixin id="avatar-head"
+              obj-model="obj: url(avatar_smooth.obj)"
+              material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2" scale=".5 .5 .5"></a-mixin>
+
+      <a-cubemap id="env">
+                <img src="./assets/avatar/env/0003.png">
+                <img src="./assets/avatar/env/0004.png">
+                <img src="./assets/avatar/env/0006.png">
+                <img src="./assets/avatar/env/0005.png">
+                <img src="./assets/avatar/env/0001.png">
+                <img src="./assets/avatar/env/0002.png"></a-cubemap>
+
+      <img id="main" src="assets/noisy-texture-256x256-o20-d20-c-000000-t0.png">
+
+      <a-mixin id="pedestal" static-body geometry="primitive: box; width: 1; height: 1.2; depth: 1; translate: 0 .6 0" material="src: #main; roughness: 1; metalness: 0"></a-mixin>
+
+      <a-entity id="centre" position="0 0 0"></a-entity>
+
+      <a-asset-item id="obj01" src="./assets/obj/01amenemhat3/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
+      <a-asset-item id="mtl01" src="./assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item></a-assets>
+
+  <script>
+  var scene = document.querySelector('a-scene');
+    (function () {
+            var obj = document.createElement('a-entity');
+                          obj.setAttribute('mixin', 'avatar-head');
+            obj.setAttribute('material', {
+              color: new THREE.Color(.8, .5, .3).getStyle(),
+              envMap: '#env',
+              metalness: .2,
+              roughness: 0,
+            });
+            scene.appendChild(obj);
+
+    })();
+  </script>
+
+  <a-entity layout="type: circle; radius: 8">
+    <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+    <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+    <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+    <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+    <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+    <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+    <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+    <a-entity mixin="pedestal" look-at="#centre"></a-entity>
+  </a-entity>
+
+  <a-entity layout="type: circle; radius: 8" position="0 0 0" >
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
+  </a-entity>
+
+  <a-sky color="black"></a-sky>
+  <a-plane static-body width="100" height="100" rotation="-90 0 0" position="0 0 0" material="src: #main; roughness: .5; metalness: 0; opacity: 1; repeat: 100 100" ></a-plane>
+
+  <a-light type="spot" color="white" intensity="4" exponent="20" position="0 4 0"></a-light>
+  <a-light type="hemisphere" color="white" groundColor="black" intensity=".5"></a-light>
+  <a-light type="ambient" color="#AAA" intensity=".10" position="0 3 0" distance="7"></a-light>
+    
+
+    <a-entity id="avatar" mixin="avatar"
+              camera universal-controls kinematic-body
+              firebase-broadcast="components: mixin, position, rotation"
+              position="0 1.8 5">
+    </a-entity>
+
+  </a-scene>
+</body>
+</html>

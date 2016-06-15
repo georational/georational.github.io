@@ -18,15 +18,10 @@
                      databaseURL: https://vrvisitors.firebaseio.com;
                      storageBucket: vrvisitors.appspot.com">
 
-  <a-assets>
-
-      <a-mixin  id="avatar-head"
-                obj-model="obj: url(./assets/avatar/avatar.obj)"
-                material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2"></a-mixin>
+  <a-assets><a-mixin id="avatar-head"
+                    obj-model="obj: url(./assets/avatar/avatar.obj)"</a-mixin>
         
-      <a-mixin  id="avatar-material" material="side: double; src: url(./assets/avatar/texture.png); repeat: 2 2"></a-mixin>
-        
-      <a-cubemap id="env">
+            <a-cubemap id="env">
                 <img src="./assets/avatar/env/0003.png">
                 <img src="./assets/avatar/env/0004.png">
                 <img src="./assets/avatar/env/0006.png">
@@ -34,28 +29,26 @@
                 <img src="./assets/avatar/env/0001.png">
                 <img src="./assets/avatar/env/0002.png"></a-cubemap>
                 
-      <script>
-        var scene = document.querySelector('a-scene');
-            (function () {
-                var obj = document.querySelector('#avatar-head');
+            <script>
+                var scene = document.querySelector('a-scene');
+                (function () {
+                    var obj = document.querySelector('#avatar-head');
                     obj.setAttribute('material', {
-                    color: new THREE.Color(.8, .5, .3).getStyle(),
+                    color: new THREE.Color(.8, .5, .36).getStyle(),
                     envMap: '#env',
                     metalness: .2,
                     roughness: 0,
                     });
-                    scene.appendChild(obj);
-            })();
-      </script>
+                    scene.appendChild(obj);})();</script>
 
-      <img id="main" src="assets/noisy-texture-256x256-o20-d20-c-000000-t0.png">
+            <img id="main" src="assets/noisy-texture-256x256-o20-d20-c-000000-t0.png">
 
-      <a-mixin id="pedestal" static-body geometry="primitive: box; width: 1; height: 1.2; depth: 1; translate: 0 .6 0" material="src: #main; roughness: 1; metalness: 0"></a-mixin>
+            <a-mixin id="pedestal" static-body geometry="primitive: box; width: 1; height: 1.2; depth: 1; translate: 0 .6 0" material="src: #main; roughness: 1; metalness: 0"></a-mixin>
 
-      <a-entity id="centre" position="0 0 0"></a-entity>
+            <a-entity id="centre" position="0 0 0"></a-entity>
 
-      <a-asset-item id="obj01" src="./assets/obj/01amenemhat3/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
-      <a-asset-item id="mtl01" src="./assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item></a-assets>
+            <a-asset-item id="obj01" src="./assets/obj/01amenemhat3/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="mtl01" src="./assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item></a-assets>
       
 
   <a-entity layout="type: circle; radius: 8">
@@ -70,14 +63,14 @@
   </a-entity>
 
   <a-entity layout="type: circle; radius: 8" position="0 0 0" >
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" mixin="_01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
   </a-entity>
 
   <a-sky color="black"></a-sky>

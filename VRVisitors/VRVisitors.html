@@ -40,8 +40,6 @@
                 var obj = document.querySelector('#avatar-head');
                     obj.setAttribute('material', {
                     color: new THREE.Color(.66, .52, .23).getStyle(),
-                    side: THREE.DoubleSide,
-                    map: '#avatar-material',
                     envMap: '#env',
                     metalness: .2,
                     roughness: 0,
@@ -89,7 +87,7 @@
   <a-light type="hemisphere" color="white" groundColor="black" intensity=".5"></a-light>
   <a-light type="ambient" color="#AAA" intensity=".10" position="0 3 0" distance="7"></a-light>
 
-    <a-entity id="avatar" mixin="avatar-head"
+    <a-entity id="avatar" mixin="avatar-head" material="side: double"
               camera universal-controls kinematic-body 
               firebase-broadcast="components: mixin, position, rotation"
               position="0 1.67 5">

@@ -6,12 +6,12 @@
     <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-firebase-component/master/dist/aframe-firebase-component.min.js"></script>
     <script src="./js/aframe-layout-component.min.js"></script>
-    <script src="./js/aframe-extras.min.js"></script>
+    <script src="./js/aframe-physics-components.js"></script>
   </head>
 
 <body>
 
-  <a-scene  physics
+  <a-scene  physics-world=""
             fog="type: linear; color: #000; far: 24; near: 6"
             firebase="apiKey: AIzaSyAGFBL9jkhsqIHe0xwB-JEb4V4FHcozDmk;
                      authDomain: vrvisitors.firebaseapp.com;
@@ -63,14 +63,14 @@
   </a-entity>
 
   <a-entity layout="type: circle; radius: 8" position="0 0 0" >
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
-    <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity physics-body="mass: 0; boundingBox: 1 2 1" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity physics-body="mass: 0; boundingBox: 1 2 1" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity physics-body="mass: 0; boundingBox: 1 2 1" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity physics-body="mass: 0; boundingBox: 1 2 1" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity physics-body="mass: 0; boundingBox: 1 2 1" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity physics-body="mass: 0; boundingBox: 1 2 1" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity physics-body="mass: 0; boundingBox: 1 2 1" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+    <a-entity physics-body="mass: 0; boundingBox: 1 2 1" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
   </a-entity>
 
   <a-sky color="black"></a-sky>
@@ -81,9 +81,10 @@
   <a-light type="ambient" color="#AAA" intensity=".10" position="0 3 0" distance="7"></a-light>
 
     <a-entity id="avatar" mixin="avatar-head" material="tside: double; src: url(./assets/avatar/texture.png); repeat: 2 2"
-              camera look-controls wasd-controls kinematic-body 
+              camera look-controls wasd-physics-controls
+              physics-body="mass: 75; boundingBox: 1 1.85 1" 
               firebase-broadcast="components: mixin, position, rotation, material"
-              position="0 1.67 5">
+              position="0 1.75 5">
     </a-entity>
 
   </a-scene>

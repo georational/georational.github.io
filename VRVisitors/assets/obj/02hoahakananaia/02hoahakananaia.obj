@@ -1,5 +1,6 @@
 # Blender v2.75 (sub 0) OBJ File: 'hoahakananaia.blend'
 # www.blender.org
+mtllib 02hoahakananaia.mtl
 o sculpt
 v -0.707585 3.592242 -0.271358
 v -0.712564 3.623262 -0.288318
@@ -11992,6 +11993,7 @@ vn -0.852600 0.291000 -0.434000
 vn -0.964300 -0.024100 0.263600
 vn -0.393000 0.327300 -0.859300
 vn -0.682800 0.366100 -0.632300
+usemtl Texture_0
 s 1
 f 1/1/1 2/2/2 3/3/3
 f 4/4/4 5/5/5 6/6/6

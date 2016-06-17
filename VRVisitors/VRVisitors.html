@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>VRVisitors</title>
-    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="https://aframe.io/aframe/dist/aframe.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-firebase-component/master/dist/aframe-firebase-component.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script>
     <script src="./js/aframe-layout-component.min.js"></script>
@@ -46,14 +46,12 @@
 
             <a-mixin id="pedestal" static-body geometry="primitive: box; width: 1; height: 1.2; depth: 1; translate: 0 .6 0" material="src: #main; roughness: 1; metalness: 0"></a-mixin>
 
-            <a-entity id="centre" position="0 0 0"></a-entity>
-         
             <a-asset-item id="obj01" src="./assets/obj/01amenemhat3/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
             <a-asset-item id="mtl01" src="./assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item>
             <a-asset-item id="obj02" src="./assets/obj/02hoahakananaia/02hoahakananaia.obj" crossorigin="anonymous"></a-asset-item>
             <a-asset-item id="mtl02" src="./assets/obj/02hoahakananaia/02hoahakananaia.mtl" crossorigin="anonymous"></a-asset-item></a-assets>
       
-
+  <a-entity id="centre" position="0 0 0"></a-entity>
   <a-entity layout="type: circle; radius: 8">
            <a-entity mixin="pedestal" look-at="#centre"></a-entity>
            <a-entity mixin="pedestal" look-at="#centre"></a-entity>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My A-Frame Scene</title>
+    <script src="http://wizgrav.github.io/aframe/dist/aframe.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script>
+    <script src="aframe-layout-component.min.js"></script>
+  </head>
+
+
+  <body>
+
+  <a-scene fog="type: linear; color: white; far: 24; near: 6">
+    <a-assets>
+      <img id="main" src="assets/noisy-texture-256x256-o15-d48-c-ffffff-t0.png">
+      <a-entity id="infocentre" position="0 1.33 0"></a-entity>
+
+    </a-assets>
+
+
+         <a-entity camera look-controls wasd-controls position="0 1.67 0">
+           <a-entity cursor="maxDistance: 3" geometry="primitive: sphere"></a-entity>
+         </a-entity>
+
+
+         <a-entity layout="type: circle; radius: 5" position="0 1 0">
+
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="black" opacity="0" look-at="#infocentre">
+             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
+             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
+           </a-box>
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="black" opacity="0" look-at="#infocentre">
+             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
+             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
+           </a-box>
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="black" opacity="0" look-at="#infocentre">
+             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
+             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
+           </a-box>
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="black" opacity="0" look-at="#infocentre">
+             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
+             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
+           </a-box>
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="black" opacity="0" look-at="#infocentre">
+             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
+             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
+           </a-box>
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="black" opacity="0" look-at="#infocentre">
+             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
+             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
+           </a-box>
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="black" opacity="0" look-at="#infocentre">
+             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
+             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
+           </a-box>
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="black" opacity="0" look-at="#infocentre">
+             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
+             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
+           </a-box>
+         </a-entity>
+
+    <a-sky color="black"></a-sky>
+    <a-plane width="100" height="100" rotation="-90 0 0" position="0 0 0" material="src: #main; roughness: .9; metalness: 0; opacity: 1; repeat: 100 100" ></a-plane>
+    <a-light type="hemisphere" color="white" groundColor="black" intensity=".33" ></a-light>
+    <a-light type="ambient" color="#AAA" intensity="0" position="0 3 0" distance="7"></a-light>
+
+
+  </a-scene>
+
+
+  </body>
+</html>

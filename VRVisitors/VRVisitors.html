@@ -76,41 +76,7 @@
     <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
   </a-entity>
   
-  <a-entity layout="type: circle; radius: 10" position="0 1 0">
 
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="0" look-at="#infocentre">
-             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
-             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
-           </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="0" look-at="#infocentre">
-             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
-             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
-           </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="0" look-at="#infocentre">
-             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
-             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
-           </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="0" look-at="#infocentre">
-             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
-             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
-           </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="0" look-at="#infocentre">
-             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
-             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
-           </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="0" look-at="#infocentre">
-             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
-             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
-           </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="0" look-at="#infocentre">
-             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
-             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
-           </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="0" look-at="#infocentre">
-             <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="1"></a-animation>
-             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
-           </a-box>
-         </a-entity>
 
   <a-sky color="black"></a-sky>
   <a-plane static-body width="100" height="100" rotation="-90 0 0" position="0 0 0" material="src: #main; roughness: .5; metalness: 0; opacity: 1; repeat: 100 100" ></a-plane>
@@ -123,7 +89,7 @@
               camera look-controls wasd-controls kinematic-body 
               firebase-broadcast="components: mixin, position, rotation, material"
               position="0 1.67 5">
-              
+              <a-entity cursor="maxDistance: 3" geometry="primitive: sphere"></a-entity>
     </a-entity>
 
   </a-scene>

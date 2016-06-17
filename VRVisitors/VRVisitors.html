@@ -12,7 +12,7 @@
 
 <body>
 
-  <a-scene  physics
+  <a-scene  
             fog="type: linear; color: #111111; far: 24; near: 6"
             firebase="apiKey: AIzaSyAGFBL9jkhsqIHe0xwB-JEb4V4FHcozDmk;
                      authDomain: vrvisitors.firebaseapp.com;
@@ -81,7 +81,7 @@
            <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
   </a-entity>
   
-  <a-entity id="infocentre" position="0 1.33 0"></a-entity>
+  <a-entity id="infocentre" position="0 1.25 0"></a-entity>
   <a-entity layout="type: circle; radius: 5" position="0 1 0">
            <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="1" look-at="#infocentre">
              <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="0"></a-animation>

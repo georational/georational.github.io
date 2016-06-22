@@ -7,12 +7,12 @@
     <script src="https://rawgit.com/ngokevin/aframe-firebase-component/master/dist/aframe-firebase-component.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script>
     <script src="./js/aframe-layout-component.min.js"></script>
-    
+
   </head>
 
 <body>
 
-  <a-scene  
+  <a-scene
             fog="type: linear; color: #111111; far: 24; near: 6"
             firebase="apiKey: AIzaSyAGFBL9jkhsqIHe0xwB-JEb4V4FHcozDmk;
                      authDomain: vrvisitors.firebaseapp.com;
@@ -21,7 +21,7 @@
 
   <a-assets><a-mixin id="avatar-head"
                     obj-model="obj: url(./assets/avatar/avatar.obj)"></a-mixin>
-        
+
             <a-cubemap id="env">
                 <img src="./assets/avatar/env/0003.png">
                 <img src="./assets/avatar/env/0004.png">
@@ -29,7 +29,7 @@
                 <img src="./assets/avatar/env/0005.png">
                 <img src="./assets/avatar/env/0001.png">
                 <img src="./assets/avatar/env/0002.png"></a-cubemap>
-                
+
             <script>
                 var scene = document.querySelector('a-scene');
                 (function () {
@@ -49,15 +49,27 @@
             <a-asset-item id="obj01" src="./assets/obj/01amenemhat3/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
             <a-asset-item id="mtl01" src="./assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item>
             <a-asset-item id="obj02" src="./assets/obj/02hoahakananaia/02hoahakananaia.obj" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="mtl02" src="./assets/obj/02hoahakananaia/02hoahakananaia.mtl" crossorigin="anonymous"></a-asset-item></a-assets>
-      
+            <a-asset-item id="mtl02" src="./assets/obj/02hoahakananaia/02hoahakananaia.mtl" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="obj01" src="./assets/obj/03levantstatue/03levantstatue.obj" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="mtl01" src="./assets/obj/03levantstatue/03levantstatue.mtl" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="obj01" src="./assets/obj/04nandi/04nandi.obj" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="mtl01" src="./assets/obj/04nandi/04nandi.mtl" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="obj01" src="./assets/obj/05zeus/05zeus.obj" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="mtl01" src="./assets/obj/05zeus/05zeus.mtl" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="obj01" src="./assets/obj/06aa/06aa.obj" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="mtl01" src="./assets/obj/06aa/06aa.mtl" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="obj01" src="./assets/obj/07gudea/07gudea.obj" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="mtl01" src="./assets/obj/07gudea/07gudea.mtl" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="obj01" src="./assets/obj/08xiuhcoatl/08xiuhcoatl.obj" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="mtl01" src="./assets/obj/08xiuhcoatl/08xiuhcoatl.mtl" crossorigin="anonymous"></a-asset-item></a-assets>
+
   <a-entity id="avatar" mixin="avatar-head" material="side: single; src: url(./assets/avatar/texture.png); repeat: 2 2"
-           camera look-controls wasd-controls kinematic-body 
+           camera look-controls wasd-controls kinematic-body
            firebase-broadcast="components: mixin, position, rotation, material"
            position="0 1.67 5">
            <a-entity cursor="maxDistance: 3" geometry="primitive: sphere"></a-entity>
   </a-entity>
-    
+
   <a-entity id="centre" position="0 0 0"></a-entity>
   <a-entity layout="type: circle; radius: 8">
            <a-entity mixin="pedestal" look-at="#centre"></a-entity>
@@ -80,7 +92,7 @@
            <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
            <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
   </a-entity>
-  
+
   <a-entity id="infocentre" position="0 1.25 0"></a-entity>
   <a-entity layout="type: circle; radius: 5" position="0 1 0">
            <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="0" look-at="#infocentre">

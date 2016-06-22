@@ -1,4 +1,4 @@
-# Blender MTL File: 'None'
+# Blender MTL File: 'levantstatue.blend'
 # Material Count: 2
 
 newmtl levant-statue
@@ -9,7 +9,7 @@ Ks 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd 03levantstatue.jpg
+map_Kd levant-statue.jpg
 
 newmtl levant-statue_NONE
 Ns 0.000000
@@ -19,4 +19,4 @@ Ks 0.000000 0.000000 0.000000
 Ni 1.000000
 d 1.000000
 illum 2
-map_Kd 03levantstatue.jpg
+map_Kd levant-statue.jpg

@@ -46,11 +46,11 @@
 
             <img id="main" src="assets/noisy-texture-256x256-o20-d20-c-000000-t0.png">
 
-            <a-mixin id="pedestal1" static-body geometry="primitive: box; width: 1.066; height: 1.16; depth: 1.066; translate: 0 .553 0" material="src: #main; roughness: 1; metalness: 0"></a-mixin>
-            <a-mixin id="pedestal9" static-body geometry="primitive: box; width: .25; height: 1.75; depth: .25; translate: -.0333 .875 0" material="src: #main; roughness: 1; metalness: 0"></a-mixin>
-            <a-mixin id="pedestal7" static-body geometry="primitive: box; width: .6; height: 1; depth: .6; translate: 0 .5 0" material="src: #main; roughness: 1; metalness: 0"></a-mixin>
-            <a-mixin id="pedestal4" static-body geometry="primitive: box; width: 1.44; height: .5; depth: 2; translate: 0 .25 0" material="src: #main; roughness: 1; metalness: 0"></a-mixin>
-            <a-mixin id="pedestal3" static-body geometry="primitive: box; width: 1.333; height: .5; depth: 1.33; translate: 0 .25 0" material="src: #main; roughness: 1; metalness: 0"></a-mixin>
+            <a-mixin id="pedestal1" static-body geometry="primitive: box; width: 1.066; height: 1.16; depth: 1.066; translate: 0 .553 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.066 1.066"></a-mixin>
+            <a-mixin id="pedestal9" static-body geometry="primitive: box; width: .25; height: 1.75; depth: .25; translate: -.0333 .875 0" material="src: #main; roughness: 1; metalness: 0; repeat: .25 .25"></a-mixin>
+            <a-mixin id="pedestal7" static-body geometry="primitive: box; width: .6; height: 1; depth: .6; translate: 0 .5 0" material="src: #main; roughness: 1; metalness: 0; repeat: .6 .6"></a-mixin>
+            <a-mixin id="pedestal4" static-body geometry="primitive: box; width: 1.44; height: .5; depth: 2; translate: 0 .25 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.44 2"></a-mixin>
+            <a-mixin id="pedestal3" static-body geometry="primitive: box; width: 1.333; height: .5; depth: 1.333; translate: 0 .25 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.333 1.333"></a-mixin>
 
 
             <a-asset-item id="obj01" src="./assets/obj/01amenemhat3/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
@@ -71,7 +71,7 @@
             <a-asset-item id="mtl08" src="./assets/obj/08xiuhcoatl/08xiuhcoatl.mtl" crossorigin="anonymous"></a-asset-item></a-assets>
 
   <a-entity id="avatar" mixin="avatar-head" material="side: single; src: url(./assets/avatar/texture.png); repeat: 2 2"
-           camera universal-controls kinematic-body  
+           camera universal-controls kinematic-body look-controls="enabled: true" 
            firebase-broadcast="components: mixin, position, rotation, material"
            position="0 1.67 5">
            <a-entity cursor="maxDistance: 3" geometry="primitive: sphere"></a-entity>

@@ -68,7 +68,7 @@
             <a-asset-item id="mtl08" src="./assets/obj/08xiuhcoatl/08xiuhcoatl.mtl" crossorigin="anonymous"></a-asset-item></a-assets>
 
   <a-entity id="avatar" mixin="avatar-head" material="side: single; src: url(./assets/avatar/texture.png); repeat: 2 2"
-           camera universal-controls kinematic-bodylook-controls="enabled: true" 
+           camera universal-controls kinematic-body  
            firebase-broadcast="components: mixin, position, rotation, material"
            position="0 1.67 5">
            <a-entity cursor="maxDistance: 3" geometry="primitive: sphere"></a-entity>

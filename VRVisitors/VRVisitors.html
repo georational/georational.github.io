@@ -73,11 +73,13 @@
   <a-entity id="avatar" mixin="avatar-head" material="side: single; src: url(./assets/avatar/texture.png); repeat: 2 2"
            camera universal-controls="acceleration: 100" kinematic-body look-controls="enabled: true" 
            firebase-broadcast="components: mixin, position, rotation, material"
-           position="0 1.85 5">
+           position="0 2 5">
            <a-entity cursor="maxDistance: 3" geometry="primitive: sphere"></a-entity>
   </a-entity>
 
-  <a-image src="./assets/VR_Visitors_v02.png" width="4" height="1.056" look-at="[camera]"></a-image>
+  <a-image src="./assets/VR_Visitors_v02.png" width="4" height="1.056" look-at="[camera]" position="0 2 0">
+    
+  </a-image>
   <a-entity id="centre" position="0 0 0"></a-entity>
   <a-entity layout="type: circle; radius: 8">
            <a-entity mixin="pedestal0" look-at="#centre"></a-entity>

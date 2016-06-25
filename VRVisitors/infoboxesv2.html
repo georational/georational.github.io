@@ -76,7 +76,7 @@
            camera universal-controls="acceleration: 100" kinematic-body look-controls="enabled: true" 
            firebase-broadcast="components: mixin, position, rotation, material"
            position="0 2 4.75">
-           <a-entity cursor="maxDistance: 3" geometry="primitive: sphere"></a-entity></a-entity>
+           <a-entity cursor="maxDistance: 10; fuse: true"> geometry="primitive: sphere"></a-entity></a-entity>
 
   <a-image src="./assets/VR_Visitors_v03.png" width="4" height="1.192" position="0 2 0">
            <a-animation attribute="opacity" begin="9000" dur="3000" from="1" to="0"></a-animation></a-image>
@@ -104,31 +104,31 @@
            <a-entity static-body="shape: box" obj-model="obj: #obj07; mtl: #mtl07" look-at="#centre"></a-entity></a-entity>
            
   <a-entity id="infocentre" position="0 1.25 0"></a-entity>
-  <a-entity layout="type: circle; radius: 7.5" position="0 1 0" rotation="0 -10 0">
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="1" look-at="#infocentre">
-            <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="0"></a-animation>
-             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="1"></a-animation>
+  <a-mixin id="info" material="opacity=0"></a-mixin>
+  <a-mixin id="info-hovered" aterial="opacity=1"></a-mixin>
+  <a-entity layout="type: circle; radius: 7.5" position="0 1 0" rotation="0 -12 0">
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" mixin="info" look-at="#infocentre">
+            
            </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="1" look-at="#infocentre">
-           <a-animation begin="cursor-mouseenter" attribute="opacity" dur="360" to="0"></a-animation>
-             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="1"></a-animation>
-           </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="1" look-at="#infocentre">
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" mixin="info" look-at="#infocentre">
            
            </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="1" look-at="#infocentre">
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" mixin="info" look-at="#infocentre">
+           
+           </a-box>
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" mixin="info" look-at="#infocentre">
             
            </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="1" look-at="#infocentre">
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" mixin="info" look-at="#infocentre">
             
            </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="1" look-at="#infocentre">
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" mixin="info" look-at="#infocentre">
              
            </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="1" look-at="#infocentre">
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" mixin="info" look-at="#infocentre">
            
            </a-box>
-           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" opacity="1" look-at="#infocentre">
+           <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" mixin="info" look-at="#infocentre">
              
            </a-box>
          </a-entity>

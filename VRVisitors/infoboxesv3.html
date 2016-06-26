@@ -77,10 +77,10 @@
             <a-mixin id="info-hovered" material="opacity: 1"></a-mixin></a-assets>
 
   <a-entity id="avatar" mixin="avatar-head" material="side: single; src: url(./assets/avatar/texture.png); repeat: 2 2"
-           camera universal-controls look-controls="enabled: true" kinematic-body
+           camera universal-controls look-controls="enabled: true"
            firebase-broadcast="components: mixin, position, rotation, material"
            position="0 2.4 4.75">
-           <a-cursor position="0 0 1" geometry="ring" material="color: cyan; shader: flat; opacity: 0" maxDistance="30" fuse="true"></a-cursor></a-entity>
+           <a-cursor geometry="ring" material="color: cyan; shader: flat; opacity: 0" maxDistance="30" fuse="true"></a-cursor></a-entity>
 
   <a-image src="#title" width="4" height="1.192" position="0 2 0">
            <a-animation attribute="opacity" begin="9000" dur="3000" from="1" to="0"></a-animation></a-image>

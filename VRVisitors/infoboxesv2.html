@@ -49,11 +49,11 @@
             <img id="main" src="./assets/noisy-texture-256x256-o20-d20-c-000000-t0.png">
             <img id="title" src="./assets/VR_Visitors_v03.png">
 
-            <a-mixin id="pedestal1" static-body geometry="primitive: box; width: 1.066; height: 1.16; depth: 1.066; translate: 0 .553 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.066 1.066"></a-mixin>
-            <a-mixin id="pedestal9" static-body geometry="primitive: box; width: .25; height: 1.75; depth: .25; translate: -.0333 1.875 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1 1"></a-mixin>
-            <a-mixin id="pedestal7" static-body geometry="primitive: box; width: .6; height: 1; depth: .6; translate: 0 .5 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1 1"></a-mixin>
-            <a-mixin id="pedestal4" static-body geometry="primitive: box; width: 1.44; height: .5; depth: 2; translate: 0 .25 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.44 2"></a-mixin>
-            <a-mixin id="pedestal3" static-body geometry="primitive: box; width: 1.333; height: .5; depth: 1.333; translate: 0 .25 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.333 1.333"></a-mixin>
+            <a-mixin id="pedestal1" static-body geometry="primitive: box; width: 1.066; height: 1.16; depth: 1.066; translate: 0 0.553 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.066 1.066"></a-mixin>
+            <a-mixin id="pedestal9" static-body geometry="primitive: box; width: 0.25; height: 1.75; depth: 0.25; translate: -0.0333 0.875 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1 1"></a-mixin>
+            <a-mixin id="pedestal7" static-body geometry="primitive: box; width: 0.6; height: 1; depth: 0.6; translate: 0 0.5 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1 1"></a-mixin>
+            <a-mixin id="pedestal4" static-body geometry="primitive: box; width: 1.44; height: 0.5; depth: 2; translate: 0 0.25 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.44 2"></a-mixin>
+            <a-mixin id="pedestal3" static-body geometry="primitive: box; width: 1.333; height: 0.5; depth: 1.333; translate: 0 0.25 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.333 1.333"></a-mixin>
 
 
             <a-asset-item id="obj01" src="./assets/obj/01amenemhat3/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
@@ -88,32 +88,9 @@
   <a-image src="#title" width="4" height="1.192" position="0 2 0">
            <a-animation attribute="opacity" begin="9000" dur="3000" from="1" to="0"></a-animation></a-image>
                
-  <a-entity id="centre" position="0 0 0"></a-entity>
-  
-  <a-entity layout="type: circle; radius: 8" position="0 0 0">
-           <a-entity mixin="pedestal0" look-at="#centre"></a-entity>
-           <a-entity mixin="pedestal4" look-at="#centre"></a-entity>
-           <a-entity mixin="pedestal0" look-at="#centre"></a-entity>
-           <a-entity mixin="pedestal3" look-at="#centre"></a-entity>
-           <a-entity mixin="pedestal0" look-at="#centre"></a-entity>
-           <a-entity mixin="pedestal1" look-at="#centre"></a-entity>
-           <a-entity mixin="pedestal9" look-at="#centre"></a-entity>
-           <a-entity mixin="pedestal7" look-at="#centre"></a-entity></a-entity>
-
-  <a-entity layout="type: circle; radius: 8" position="0 0 0" >
-           <a-entity static-body="shape: box" obj-model="obj: #obj08; mtl: #mtl08" look-at="#centre"></a-entity>
-           <a-entity static-body="shape: box" obj-model="obj: #obj04; mtl: #mtl04" look-at="#centre"></a-entity>
-           <a-entity static-body="shape: box" obj-model="obj: #obj02; mtl: #mtl02" look-at="#centre"></a-entity>
-           <a-entity static-body="shape: box" obj-model="obj: #obj03; mtl: #mtl03" look-at="#centre"></a-entity>
-           <a-entity static-body="shape: box" obj-model="obj: #obj06; mtl: #mtl06" look-at="#centre"></a-entity>
-           <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
-           <a-entity static-body="shape: box" obj-model="obj: #obj05; mtl: #mtl05" look-at="#centre"></a-entity>
-           <a-entity static-body="shape: box" obj-model="obj: #obj07; mtl: #mtl07" look-at="#centre"></a-entity></a-entity>
-           
   <a-entity id="infocentre" position="0 1.25 0"></a-entity>
-
   <a-entity layout="type: circle; radius: 7.5" position="0 1 0" rotation="0 -13 0">
-           <!--<a-entity geometry="primitive: plane; width: 1.33; height: 1.77" color="white" mixin="info" look-at="#infocentre">
+           <a-entity geometry="primitive: plane; width: 1.33; height: 1.77" color="white" mixin="info" look-at="#infocentre">
            </a-entity>
            <a-entity geometry="primitive: plane; width: 1.33; height: 1.77" color="white" mixin="info" look-at="#infocentre">
            </a-entity>
@@ -129,6 +106,26 @@
            </a-entity>
            <a-entity geometry="primitive: plane; width: 1.33; height: 1.77" color="white" mixin="info" look-at="#infocentre">
            </a-entity>--></a-entity>
+           
+  <a-entity id="centre" position="0 0 0"></a-entity>
+  <a-entity layout="type: circle; radius: 8" position="0 0 0">
+           <a-entity mixin="pedestal0" look-at="#centre"></a-entity>
+           <a-entity mixin="pedestal4" look-at="#centre"></a-entity>
+           <a-entity mixin="pedestal0" look-at="#centre"></a-entity>
+           <a-entity mixin="pedestal3" look-at="#centre"></a-entity>
+           <a-entity mixin="pedestal0" look-at="#centre"></a-entity>
+           <a-entity mixin="pedestal1" look-at="#centre"></a-entity>
+           <a-entity mixin="pedestal9" look-at="#centre"></a-entity>
+           <a-entity mixin="pedestal7" look-at="#centre"></a-entity></a-entity>
+  <a-entity layout="type: circle; radius: 8" position="0 0 0" >
+           <a-entity static-body="shape: box" obj-model="obj: #obj08; mtl: #mtl08" look-at="#centre"></a-entity>
+           <a-entity static-body="shape: box" obj-model="obj: #obj04; mtl: #mtl04" look-at="#centre"></a-entity>
+           <a-entity static-body="shape: box" obj-model="obj: #obj02; mtl: #mtl02" look-at="#centre"></a-entity>
+           <a-entity static-body="shape: box" obj-model="obj: #obj03; mtl: #mtl03" look-at="#centre"></a-entity>
+           <a-entity static-body="shape: box" obj-model="obj: #obj06; mtl: #mtl06" look-at="#centre"></a-entity>
+           <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+           <a-entity static-body="shape: box" obj-model="obj: #obj05; mtl: #mtl05" look-at="#centre"></a-entity>
+           <a-entity static-body="shape: box" obj-model="obj: #obj07; mtl: #mtl07" look-at="#centre"></a-entity></a-entity>
 
   <a-sky color="black"></a-sky>
   

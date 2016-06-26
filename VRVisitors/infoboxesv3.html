@@ -49,11 +49,11 @@
             <img id="main" src="./assets/noisy-texture-256x256-o20-d20-c-000000-t0.png">
             <img id="title" src="./assets/VR_Visitors_v03.png">
 
-            <a-mixin id="pedestal1" geometry="primitive: box; width: 1.066; height: 1.16; depth: 1.066; translate: 0 0.553 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.066 1.066"></a-mixin>
-            <a-mixin id="pedestal9" geometry="primitive: box; width: 0.25; height: 1.75; depth: 0.25; translate: -0.0333 0.875 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1 1"></a-mixin>
-            <a-mixin id="pedestal7" geometry="primitive: box; width: 0.6; height: 1; depth: 0.6; translate: 0 0.5 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1 1"></a-mixin>
-            <a-mixin id="pedestal4" geometry="primitive: box; width: 1.44; height: 0.5; depth: 2; translate: 0 0.25 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.44 2"></a-mixin>
-            <a-mixin id="pedestal3" geometry="primitive: box; width: 1.333; height: 0.5; depth: 1.333; translate: 0 0.25 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.333 1.333"></a-mixin>
+            <a-mixin static-body id="pedestal1" geometry="primitive: box; width: 1.066; height: 1.16; depth: 1.066; translate: 0 0.553 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.066 1.066"></a-mixin>
+            <a-mixin static-body id="pedestal9" geometry="primitive: box; width: 0.25; height: 1.75; depth: 0.25; translate: -0.0333 0.875 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1 1"></a-mixin>
+            <a-mixin static-body id="pedestal7" geometry="primitive: box; width: 0.6; height: 1; depth: 0.6; translate: 0 0.5 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1 1"></a-mixin>
+            <a-mixin static-body id="pedestal4" geometry="primitive: box; width: 1.44; height: 0.5; depth: 2; translate: 0 0.25 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.44 2"></a-mixin>
+            <a-mixin static-body id="pedestal3" geometry="primitive: box; width: 1.333; height: 0.5; depth: 1.333; translate: 0 0.25 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.333 1.333"></a-mixin>
 
 
             <a-asset-item id="obj01" src="./assets/obj/01amenemhat3/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
@@ -77,9 +77,9 @@
             <a-mixin id="info-hovered" material="opacity: 1"></a-mixin></a-assets>
 
   <a-entity id="avatar" mixin="avatar-head" material="side: single; src: url(./assets/avatar/texture.png); repeat: 2 2"
-           camera universal-controls look-controls="enabled: true" 
+           camera universal-controls look-controls="enabled: true" kinematic-body
            firebase-broadcast="components: mixin, position, rotation, material"
-           position="0 2.4 4.75" kinematic-body>
+           position="0 2.4 4.75">
            <a-cursor geometry="ring" material="color: cyan; shader: flat; opacity: 0" maxDistance="30" fuse="true"></a-cursor></a-entity>
 
   <a-image src="#title" width="4" height="1.192" position="0 2 0">
@@ -90,13 +90,13 @@
   <a-entity id="infocentre" position="0 .625 0"></a-entity>
   <a-entity layout="type: circle; radius: 8" position="0 0 0">
            <a-entity mixin="pedestal0" look-at="#centre"></a-entity>
-           <a-entity static-body mixin="pedestal4" look-at="#centre"></a-entity>
+           <a-entity mixin="pedestal4" look-at="#centre"></a-entity>
            <a-entity mixin="pedestal0" look-at="#centre"></a-entity>
-           <a-entity static-body mixin="pedestal3" look-at="#centre"></a-entity>
+           <a-entity mixin="pedestal3" look-at="#centre"></a-entity>
            <a-entity mixin="pedestal0" look-at="#centre"></a-entity>
-           <a-entity static-body mixin="pedestal1" look-at="#centre"></a-entity>
-           <a-entity static-body mixin="pedestal9" look-at="#centre"></a-entity>
-           <a-entity static-body mixin="pedestal7" look-at="#centre"></a-entity></a-entity>
+           <a-entity mixin="pedestal1" look-at="#centre"></a-entity>
+           <a-entity mixin="pedestal9" look-at="#centre"></a-entity>
+           <a-entity mixin="pedestal7" look-at="#centre"></a-entity></a-entity>
   <a-entity layout="type: circle; radius: 8" position="0 0 0" >
            <a-entity static-body="shape: box" obj-model="obj: #obj08; mtl: #mtl08" look-at="#centre"></a-entity>
            <a-entity static-body="shape: box" obj-model="obj: #obj04; mtl: #mtl04" look-at="#centre"></a-entity>

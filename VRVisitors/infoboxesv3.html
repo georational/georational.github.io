@@ -79,7 +79,7 @@
   <a-entity id="avatar" mixin="avatar-head" material="side: single; src: url(./assets/avatar/texture.png); repeat: 2 2"
            camera universal-controls look-controls="enabled: true" 
            firebase-broadcast="components: mixin, position, rotation, material"
-           position="0 2 4.75">
+           position="0 2.4 4.75" kinematic-body>
            <a-cursor geometry="ring" material="color: cyan; shader: flat; opacity: 0" maxDistance="30" fuse="true"></a-cursor></a-entity>
 
   <a-image src="#title" width="4" height="1.192" position="0 2 0">
@@ -118,7 +118,7 @@
 
   <a-sky color="black"></a-sky>
   
-  <a-plane static-body width="100" height="100" rotation="-90 0 0" position="0 -.25 0" material="src: #main; roughness: .5; metalness: 0; opacity: 1; repeat: 100 100" ></a-plane>
+  <a-plane static-body width="100" height="100" rotation="-90 0 0" position="0 0 0" material="src: #main; roughness: .5; metalness: 0; opacity: 1; repeat: 100 100" ></a-plane>
   
   <a-light type="spot" color="white" intensity="4" exponent="16" position="0 3.6 0"></a-light>
   <a-light type="hemisphere" color="white" groundColor="black" intensity=".5"></a-light>

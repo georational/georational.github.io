@@ -79,7 +79,7 @@
   <a-entity id="avatar" mixin="avatar-head" material="side: single; src: url(./assets/avatar/texture.png); repeat: 2 2"
            camera universal-controls look-controls="enabled: true" 
            firebase-broadcast="components: mixin, position, rotation, material"
-           position="0 2.4 4.75" kinematic-body>
+           position="0 2.4 4.75" kinematic-body="radius: 0.5">
            <a-cursor geometry="ring" material="color: cyan; shader: flat; opacity: 0" maxDistance="30" fuse="true"></a-cursor></a-entity>
 
   <a-image src="#title" width="4" height="1.192" position="0 2 0">

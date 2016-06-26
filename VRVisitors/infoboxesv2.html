@@ -74,7 +74,7 @@
             <a-asset-item id="mtl08" src="./assets/obj/08xiuhcoatl/08xiuhcoatl.mtl" crossorigin="anonymous"></a-asset-item>
             
             <a-mixin id="info" material="opacity: 0"></a-mixin>
-            <a-mixin id="pinfo-hovered" material="opacity: 1"></a-mixin></a-assets>
+            <a-mixin id="info-hovered" material="opacity: 1"></a-mixin></a-assets>
 
   <a-entity id="avatar" mixin="avatar-head" material="side: single; src: url(./assets/avatar/texture.png); repeat: 2 2"
            camera universal-controls="acceleration: 100" kinematic-body look-controls="enabled: true" 
@@ -114,8 +114,7 @@
 
   <a-entity layout="type: circle; radius: 7.5" position="0 1 0" rotation="0 -12 0">
            <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" mixin="info" look-at="#infocentre">
-            <a-animation begin="hovered" attribute="opacity" dur="360" to="1"></a-animation>
-             <a-animation begin="cursor-mouseleave" attribute="opacity" dur="360" to="0"></a-animation>
+            
            </a-box>
            <a-box geometry="primitive: plane; width: 1; height: 1.33;" color="white" mixin="info" look-at="#infocentre">
            

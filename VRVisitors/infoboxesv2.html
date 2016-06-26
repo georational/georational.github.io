@@ -46,7 +46,8 @@
                     });
                     scene.appendChild(obj);})();</script>
 
-            <img id="main" src="assets/noisy-texture-256x256-o20-d20-c-000000-t0.png">
+            <img id="main" src="./assets/noisy-texture-256x256-o20-d20-c-000000-t0.png">
+            <img id="title" src="./assets/VR_Visitors_v03.png">
 
             <a-mixin id="pedestal1" static-body geometry="primitive: box; width: 1.066; height: 1.16; depth: 1.066; translate: 0 .553 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.066 1.066"></a-mixin>
             <a-mixin id="pedestal9" static-body geometry="primitive: box; width: .25; height: 1.75; depth: .25; translate: -.0333 .875 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1 1"></a-mixin>
@@ -84,7 +85,7 @@
                 material="color: cyan; shader: flat; opacity: 0"
                 cursor="maxDistance: 30; fuse: true"></a-entity></a-entity>
 
-  <a-image src="./assets/VR_Visitors_v03.png" width="4" height="1.192" position="0 2 0">
+  <a-image src="#title" width="4" height="1.192" position="0 2 0">
            <a-animation attribute="opacity" begin="9000" dur="3000" from="1" to="0"></a-animation></a-image>
                
   <a-entity id="centre" position="0 0 0"></a-entity>

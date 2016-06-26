@@ -73,8 +73,8 @@
             <a-asset-item id="obj08" src="./assets/obj/08xiuhcoatl/08xiuhcoatl.obj" crossorigin="anonymous"></a-asset-item>
             <a-asset-item id="mtl08" src="./assets/obj/08xiuhcoatl/08xiuhcoatl.mtl" crossorigin="anonymous"></a-asset-item>
             
-            <a-mixin id="info" material="opacity: 0"></a-mixin>
-            <a-mixin id="info-hovered" material="opacity: 1"></a-mixin></a-assets>
+            <a-mixin id="info04" material="src: url(./assets/infobox04.png); opacity: 0"></a-mixin>
+            <a-mixin id="info04-hovered" material="src: url(./assets/infobox04.png); opacity: 1"></a-mixin></a-assets>
 
   <a-entity id="avatar" mixin="avatar-head" material="side: single; src: url(./assets/avatar/texture.png); repeat: 2 2"
            camera universal-controls="acceleration: 100" kinematic-body look-controls="enabled: true" 
@@ -96,7 +96,7 @@
            </a-entity>
            <a-entity geometry="primitive: plane; width: 1.33; height: 1.77" color="white" mixin="info" look-at="#infocentre">
            </a-entity>
-           <a-entity geometry="primitive: plane; width: 1.33; height: 1.77" color="red" mixin="info" material="src: url(./assets/infobox04.png)" look-at="#infocentre">
+           <a-entity geometry="primitive: plane; width: 1.33; height: 1.77" color="red" mixin="info04" look-at="#infocentre">
            </a-entity>
            <a-entity geometry="primitive: plane; width: 1.33; height: 1.77" color="white" mixin="info" look-at="#infocentre">
            </a-entity>

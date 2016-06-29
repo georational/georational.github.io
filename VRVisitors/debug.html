@@ -9,7 +9,6 @@
     <script src="https://rawgit.com/ngokevin/aframe-firebase-component/master/dist/aframe-firebase-component.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script>
     <script src="./js/aframe-layout-component.min.js"></script>
-    <!-- <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v1.14.0/dist/aframe-extras.min.js"></script> -->
     <script src="./js/aframe-extras.min.js"></script>
 
   </head>
@@ -17,108 +16,45 @@
 <body>
 
   <a-scene  physics
-            fog="type: linear; color: #020202; far: 24; near: 6"
-            firebase="apiKey: AIzaSyAGFBL9jkhsqIHe0xwB-JEb4V4FHcozDmk;
-                     authDomain: vrvisitors.firebaseapp.com;
-                     databaseURL: https://vrvisitors.firebaseio.com;
-                     storageBucket: vrvisitors.appspot.com">
+            >
 
-  <a-assets timeout="5400"><a-mixin id="avatar-head"
-                    obj-model="obj: url(./assets/avatar/avatar.obj)"></a-mixin>
-
-            <a-cubemap id="env">
-                <img src="./assets/avatar/env/0003.png">
-                <img src="./assets/avatar/env/0004.png">
-                <img src="./assets/avatar/env/0006.png">
-                <img src="./assets/avatar/env/0005.png">
-                <img src="./assets/avatar/env/0001.png">
-                <img src="./assets/avatar/env/0002.png"></a-cubemap>
-
-            <script>
-                var scene = document.querySelector('a-scene');
-                (function () {
-                    var obj = document.querySelector('#avatar-head');
-                    obj.setAttribute('material', {
-                    color: new THREE.Color(.42, .36, .33).getStyle(),
-                    envMap: '#env',
-                    metalness: .2,
-                    roughness: 0,
-                    });
-                    scene.appendChild(obj);})();</script>
+  
 
             <img id="main0" src="./assets/noisy-texture-256x256-o20-d20-c-000000-t0.png">
-            <img id="title" src="./assets/VR_Visitors_v03.png">
+            
 
-            <a-mixin id="pedestal1" geometry="primitive: box; width: 1.066; height: 1.16; depth: 1.066; translate: 0 0.75 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.066 1.066"></a-mixin>
+            
             <a-mixin id="pedestal9" geometry="primitive: box; width: 0.25; height: 1.75; depth: 0.25; translate: -0.0333 0.6 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1 1"></a-mixin>
-            <a-mixin static-body="shape: box" id="pedestal7" geometry="primitive: box; width: 0.6; height: 1; depth: 0.6; translate: 0 0.425 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1 1"></a-mixin>
-            <a-mixin static-body="shape: box" id="pedestal4" geometry="primitive: box; width: 1.44; height: 0.5; depth: 2; translate: 0 0.125 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.44 2"></a-mixin>
+            
             <a-mixin static-body="shape: box" id="pedestal3" geometry="primitive: box; width: 1.333; height: 0.5; depth: 1.333; translate: 0 0.125 0" material="src: #main; roughness: 1; metalness: 0; repeat: 1.333 1.333"></a-mixin>
 
 
-            <a-asset-item id="obj01" src="./assets/obj/01amenemhat3/01amenemhat3.obj" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="mtl01" src="./assets/obj/01amenemhat3/01amenemhat3.mtl" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="obj02" src="./assets/obj/02hoahakananaia/02hoahakananaia.obj" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="mtl02" src="./assets/obj/02hoahakananaia/02hoahakananaia.mtl" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="obj03" src="./assets/obj/03levantstatue/03levantstatue.obj" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="mtl03" src="./assets/obj/03levantstatue/03levantstatue.mtl" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="obj04" src="./assets/obj/04nandi/04nandi.obj" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="mtl04" src="./assets/obj/04nandi/04nandi.mtl" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="obj05" src="./assets/obj/09livia/09livia.obj" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="mtl05" src="./assets/obj/09livia/09livia.mtl" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="obj06" src="./assets/obj/06aa/06aa.obj" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="mtl06" src="./assets/obj/06aa/06aa.mtl" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="obj07" src="./assets/obj/07gudea/07gudea.obj" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="mtl07" src="./assets/obj/07gudea/07gudea.mtl" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="obj08" src="./assets/obj/08xiuhcoatl/08xiuhcoatl.obj" crossorigin="anonymous"></a-asset-item>
-            <a-asset-item id="mtl08" src="./assets/obj/08xiuhcoatl/08xiuhcoatl.mtl" crossorigin="anonymous"></a-asset-item>
             
-            <a-mixin id="info" material="opacity: 0"></a-mixin>
-            <a-mixin id="info-hovered" material="opacity: 1"></a-mixin></a-assets>
-
-  <a-entity id="avatar" mixin="avatar-head" material="side: single; src: url(./assets/avatar/texture.png); repeat: 2 2"
+            <a-asset-item id="mtl04" src="./assets/obj/04nandi/04nandi.mtl" crossorigin="anonymous"></a-asset-item>
+            
+            
+            
+  <a-entity id="avatar" 
            camera kinematic-body="radius:.9" universal-controls look-controls="enabled: true"
-           firebase-broadcast="components: mixin, position, rotation, material"
+           firebase-broadcast="components: position, rotation, material"
            position="0 1.8 4.75">
            <a-cursor geometry="ring" material="color: cyan; shader: flat; opacity: 0" maxDistance="30" fuse="true"></a-cursor></a-entity>
 
-  <a-image src="#title" width="4" height="1.192" position="0 2 0">
-           <a-animation attribute="opacity" begin="9000" dur="3000" from="1" to="0"></a-animation></a-image>
-               
-
+  
   <a-entity id="centre" position="0 0 0"></a-entity>
   <a-entity id="infocentre" position="0 .625 0"></a-entity>
   <a-entity layout="type: circle; radius: 8" position="0 0 0">
-           <a-entity mixin="pedestal0" look-at="#centre"></a-entity>
-           <a-entity mixin="pedestal4" look-at="#centre"></a-entity>
-           <a-entity mixin="pedestal0" look-at="#centre"></a-entity>
-           <a-entity mixin="pedestal3" look-at="#centre"></a-entity>
-           <a-entity mixin="pedestal0" look-at="#centre"></a-entity>
-           <a-entity mixin="pedestal1" look-at="#centre"></a-entity>
+           
            <a-entity mixin="pedestal9" look-at="#centre"></a-entity>
-           <a-entity mixin="pedestal7" look-at="#centre"></a-entity></a-entity>
+           </a-entity>
   <a-entity layout="type: circle; radius: 8" position="0 0 0" >
-           <a-entity static-body="shape: box" obj-model="obj: #obj08; mtl: #mtl08" look-at="#centre"></a-entity>
-           <a-entity static-body="shape: box" obj-model="obj: #obj04; mtl: #mtl04" look-at="#centre"></a-entity>
-           <a-entity static-body="shape: box" obj-model="obj: #obj02; mtl: #mtl02" look-at="#centre"></a-entity>
-           <a-entity static-body="shape: box" obj-model="obj: #obj03; mtl: #mtl03" look-at="#centre"></a-entity>
-           <a-entity static-body="shape: box" obj-model="obj: #obj06; mtl: #mtl06" look-at="#centre"></a-entity>
-           <a-entity static-body="shape: box" obj-model="obj: #obj01; mtl: #mtl01" look-at="#centre"></a-entity>
+           
            <a-entity static-body="shape: box" obj-model="obj: #obj05; mtl: #mtl05" look-at="#centre"></a-entity>
-           <a-entity static-body="shape: box" obj-model="obj: #obj07; mtl: #mtl07" look-at="#centre"></a-entity></a-entity>
-  <a-entity layout="type: circle; radius: 7.5" position="0 .625 0" rotation="0 -12 0">        
-           <a-image src="./assets/obj/infobox01.png" width="1.5" height="2" position="0 1 0" mixin="info" look-at="#infocentre"></a-image>
-           <a-image src="./assets/obj/infobox02.png" width="1.5" height="2" position="0 1 0" mixin="info" look-at="#infocentre"></a-image>
-           <a-image src="./assets/obj/infobox03.png" width="1.5" height="2" position="0 1 0" mixin="info" look-at="#infocentre"></a-image>
-           <a-image src="./assets/obj/infobox04.png" width="1.5" height="2" position="0 1 0" mixin="info" look-at="#infocentre"></a-image>
-           <a-image src="./assets/obj/infobox05.png" width="1.5" height="2" position="0 1 0" mixin="info" look-at="#infocentre"></a-image>
-           <a-image src="./assets/obj/infobox06.png" width="1.5" height="2" position="0 1 0" mixin="info" look-at="#infocentre"></a-image>
-           <a-image src="./assets/obj/infobox07.png" width="1.5" height="2" position="0 1 0" mixin="info" look-at="#infocentre"></a-image>
-           <a-image src="./assets/obj/infobox08.png" width="1.5" height="2" position="0 1 0" mixin="info" look-at="#infocentre"></a-image></a-entity>
-
+           </a-entity>
+  
   <a-sky color="black"></a-sky>
   
-  <a-plane static-body width="100" height="100" rotation="-90 0 0" position="0 0 0" material="src: #main; roughness: .5; metalness: 0; opacity: 1; repeat: 100 100" ></a-plane>
+  <a-plane static-body width="100" height="100" rotation="-90 0 0" position="0 0 0" material="src: #main0; roughness: .5; metalness: 0; opacity: 1; repeat: 100 100" ></a-plane>
   
   <a-light type="spot" color="white" intensity="4" exponent="16" position="0 3.6 0"></a-light>
   <a-light type="hemisphere" color="white" groundColor="black" intensity=".5"></a-light>
@@ -126,15 +62,6 @@
 
 </a-scene>
 
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-77398033-3', 'auto');
-  ga('send', 'pageview');</script>
   
 </body>
 </html>

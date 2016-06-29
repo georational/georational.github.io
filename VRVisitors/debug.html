@@ -19,7 +19,7 @@
             >
 
   
-
+<a-assets timeout="5400">
             <img id="main0" src="./assets/noisy-texture-256x256-o20-d20-c-000000-t0.png">
             
 
@@ -30,13 +30,13 @@
 
 
             
-            <a-asset-item id="mtl04" src="./assets/obj/04nandi/04nandi.mtl" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="mtl04" src="./assets/obj/04nandi/04nandi.mtl" crossorigin="anonymous"></a-asset-item></a-assets>
             
             
             
   <a-entity id="avatar" 
            camera kinematic-body="radius:.9" universal-controls look-controls="enabled: true"
-           firebase-broadcast="components: position, rotation, material"
+           
            position="0 1.8 4.75">
            <a-cursor geometry="ring" material="color: cyan; shader: flat; opacity: 0" maxDistance="30" fuse="true"></a-cursor></a-entity>
 
